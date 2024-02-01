@@ -1,0 +1,47 @@
+.mobile-menu{
+    display: none;
+}
+
+@media only screen and (max-width: 1200px){
+    .card{
+        width: 330px;
+    }
+
+    .flex-wrap{
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .mobile-menu{
+        display: block;
+    }
+} 
+
+@media only screen and (max-width: 768px){
+    .flex-wrap{
+        justify-content: center;
+    }
+
+    .card{
+        width: 294px;
+    }
+}
+
+@media only screen and (max-width: 683px){
+    .card{
+        width: 280px;
+    }
+}
+
+@media only screen and (max-width:575px){
+    .navbar-laptop{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    /* .card{
+        width: 100%;
+    } */
+}
