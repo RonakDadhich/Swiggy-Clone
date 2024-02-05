@@ -112,6 +112,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../Utils/useOnlineStatus";
+import { Swiggy_API } from "../Utils/Constant";
 
 const Body = () => {
   const [listofRestaurants, setlistofRestaurants] = useState([]);
@@ -122,7 +123,7 @@ const Body = () => {
 
   function promise() {
     return new Promise((resolve, reject) => {
-      fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8149786&lng=75.81533859999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+      fetch(Swiggy_API)
         .then((response) => response.json())
         .then((data) => resolve(data))
         .catch((error) => reject(error));

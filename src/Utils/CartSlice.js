@@ -16,10 +16,10 @@ const CartSlice = createSlice({
             state.items.splice(action.payload,1);
         },
         // originalState = {items:["pizza"]}
-        clearCart: (state, action) => {
+        clearCart: (state) => {
             // RTK - either Mutate the existing state or return a new state
             //state.items.length = 0; // originalState = []
-            return {items: []}; // this new object will be replaced inside originalState = {items:[]}
+           state.items.length = 0// this new object will be replaced inside originalState = {items:[]}
         },
     },
 });

@@ -35,11 +35,11 @@ const Cart = () => {
           </h1>
             <h1>Cart is empty. Add Items to the cart!</h1>
           </div>
-        ):  <div>
+        ):  ( <div>
 
 <button
           className="p-2 m-2 bg-black text-white rounded-lg"
-          onClick={handleClearCart}
+          onClick={() => handleClearCart()}
         >
           Clear Cart
         </button>
@@ -63,7 +63,7 @@ const Cart = () => {
             </div>
         </div>
         ))}
-</div>}
+</div>)}
        
         
     
